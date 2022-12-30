@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+/* global */
+
+body {
+  max-width: 1440px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Overpass", sans-serif;
+  background-color: hsl(216, 12%, 8%);
+  color: hsl(216, 12%, 54%);
+}
+
+/* ids and classes */
+
+#submit {
+  padding: 1em 2em;
+  width: 100%;
+  border-radius: 20px;
+  border: none;
+  letter-spacing: 0.2em;
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+  cursor: pointer;
+}
+
+#selected-score {
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 20px;
+  padding: 0.3em 1em;
+  width: 50%;
+  color: hsl(25, 97%, 53%);
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.main-component {
+  padding: 2em;
+  width: 80%;
+  max-width: 375px;
+  border: none;
+  border-radius: 20px;
+  background: radial-gradient(
+    circle at top,
+    hsl(213, 19%, 18%),
+    hsl(219, 24%, 11%)
+  );
+}
+
+.star {
+  background-color: hsl(213, 19%, 18%);
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-title {
+  color: white;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-score {
+  padding: 2em;
+  margin-bottom: 2em;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(217, 12%, 63%);
+}
+
+.attribution {
+  margin-top: 5em;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+.button-alert {
+  color: hsl(25, 97%, 53%);
+  font-size: 0.8em;
+  text-align: center;
+  padding-top: 1.5em;
+  margin-bottom: 0;
+}
+/* special states */
+
+#submit:hover {
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+  transition: 0.2s ease-in-out;
+}
+
+.rating-score:hover {
+  transition: 0.2s;
+  background-color: hsl(216, 12%, 54%);
+  color: white;
+  cursor: pointer;
+}
+
+.attribution a:hover {
+  color: hsl(0, 0%, 76%);
+  transition: 0.2s;
+}
+
+.selected,
+.selected:hover {
+  background-color: hsl(25, 97%, 53%);
+  color: white;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
