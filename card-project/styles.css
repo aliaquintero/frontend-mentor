@@ -1,0 +1,95 @@
+body { 
+    font-size: 14px;
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+    color:hsl(228, 12%, 48%);
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+h1 { 
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+}
+
+h2 { 
+    letter-spacing: .5em;
+    font-size: 1em;
+}
+
+.card { 
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    border: none;
+    width: 80%;
+    max-width: 700px;
+    overflow: hidden;
+}
+
+.purchase { 
+    background-color: hsl(158, 36%, 37%);
+    color:hsl(0, 0%, 100%);
+    font-size: .9em;
+    border-radius: 10px;
+    padding: 12px;
+    width: 85%;
+}
+
+.purchase:hover { 
+    background-color: hsl(212, 21%, 14%);
+    color:hsl(0, 0%, 100%);
+}
+
+.sale { 
+    color:hsl(158, 36%, 37%);
+    font-family: 'Fraunces', serif;
+    font-size: 2em;
+}
+
+.price { 
+    color:hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    vertical-align: super;
+
+}
+.mobile { 
+    padding: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+ .desktop { 
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+@media only screen and (max-width: 766px) {
+
+    .desktop { 
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 767px) { 
+
+    .mobile { 
+        display: none;
+    }
+}
+
+.attribution {
+     font-size: 11px; 
+     text-align: center; 
+}
+
+.attribution a { 
+    color:hsl(158, 36%, 37%); 
+    text-decoration: none; 
+    font-weight: bold; 
+} 
