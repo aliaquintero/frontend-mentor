@@ -16,7 +16,7 @@ for (i = 0; i < ratingScore.length; i++) {
       ratingScore[j].classList.remove("selected");
     }
     this.classList.add("selected");
-    selectedScore.innerHTML = `You selected ${this.innerText} out of 5.`;
+    selectedScore.innerHTML = `You selected ${this.innerText} out of 5`;
   });
 }
 
