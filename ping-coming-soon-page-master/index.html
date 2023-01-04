@@ -41,13 +41,15 @@
         <p class="container-text_secondary">Subscribe and get notified</p>
       </section>
       <section class="container-form">
-        <form name="notify" netlify>
+        <form id="form" netlify novalidate>
           <input
             type="email"
             name="email"
             id="email"
             placeholder="Your email address..."
+            required
           />
+          <div class="error hidden" aria-live="polite"></div>
           <button type="submit">Notify Me</button>
         </form>
       </section>
