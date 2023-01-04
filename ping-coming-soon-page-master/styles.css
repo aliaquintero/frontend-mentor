@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+/* global */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main {
+  width: 90%;
+  max-width: 700px;
+}
+
+header {
+  padding: 6em 0em 2em 0em;
+}
+
+button:hover,
+i:hover {
+  cursor: pointer;
+}
+
+/* classes & ids */
+
+.container-text_primary {
+  font-size: 1.9em;
+  color: hsl(0, 0%, 59%);
+}
+.container-text_primary span {
+  color: black;
+  font-weight: bold;
+}
+
+.container-text_secondary {
+  padding: 1em;
+}
+
+.container-form {
+  width: 95%;
+  margin: 0 auto;
+}
+.container-form form {
+  padding-top: 1em;
+  display: grid;
+}
+
+.container-form input {
+  font-size: 0.8em;
+  padding: 1em 3em;
+  margin: 0.5em;
+  border-radius: 30px;
+  border: 1px solid hsl(223, 100%, 88%);
+  color: hsl(0, 0%, 59%);
+}
+
+.container-form button {
+  margin: 0.5em;
+  font-size: 0.8em;
+  padding: 1em;
+  border-radius: 30px;
+  border: none;
+  background-color: #4f7df3;
+  color: white;
+  box-shadow: 7px 12px 22px -12px rgba(114, 166, 243, 0.42);
+}
+
+.container-illustration {
+  margin: 5em 0em 8em 0em;
+}
+
+.container-illustration img {
+  width: 100%;
+}
+
+/* footer */
+
+footer {
+  margin-bottom: 2em;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-brands {
+  margin: 0.65em;
+  height: 2.25em;
+  width: 2.25em;
+  color: hsl(223, 87%, 63%);
+  font-size: 1em;
+  border: 1px solid hsl(223, 100%, 88%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  padding: 2em;
+  font-size: 0.8em;
+  color: hsl(0, 0%, 59%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  text-decoration: none;
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 768px) {
+  .container-form form {
+    grid-template-columns: 70% 30%;
+  }
+}
