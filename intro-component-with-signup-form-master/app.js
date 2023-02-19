@@ -1,64 +1,50 @@
-const firstName = document.querySelector("#first-name");
-const lastName = document.querySelector("#last-name");
-const email = document.querySelector("#email");
-const password = document.querySelector("#password");
-const form = document.querySelector("form");
+const inputs = document.getElementsByTagName("input");
 const button = document.querySelector("button");
+const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 const error = document.querySelectorAll(".error");
-const tooltip = document.querySelectorAll(".error-tooltip");
-const hidden = document.querySelectorAll(".hidden");
-const inputs = [firstName, lastName, email, password];
 
-const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-const namePattern = /([a-zA-Z])\w+/g;
-const passPattern = /[a-zA-Z0-9]/g;
-
-button.addEventListener("click", function (e) {
-  inputs.forEach(function (i) {
-    const value = i.value;
-    const sibling = i.nextElementSibling;
-    if (i === email) {
-      if (!value.match(emailPattern)) {
+const checkValidity = (e) => {
+  for (let input of inputs) {
+    let inputName = input.name;
+    let inputElem = document.getElementById(inputName);
+    if (inputName === "email" && inputElem.value.length > 0) {
+      let validateEmail = inputElem.value.match(emailRegex);
+      // if the email is not the correct format
+      if (!validateEmail) {
         e.preventDefault();
-        email.classList.add("error");
-        sibling.classList.remove("hidden");
-        sibling.innerText = "Looks like this is not an email";
-      } else {
-        email.classList.remove("error");
-        sibling.classList.add("hidden");
+        inputElem.classList.add("error-border");
+        inputElem.nextElementSibling.classList.remove("hidden");
+        inputElem.nextElementSibling.innerText =
+          "Looks like this is not an email";
       }
-    } else if (i === firstName) {
-      if (!value.match(namePattern)) {
-        e.preventDefault();
-
-        firstName.classList.add("error");
-        sibling.classList.remove("hidden");
-        sibling.innerText = "First Name cannot be empty.";
-      } else {
-        email.classList.remove("error");
-        sibling.classList.add("hidden");
-      }
-    } else if (i == lastName) {
-      if (!value.match(namePattern)) {
-        e.preventDefault();
-
-        lastName.classList.add("error");
-        sibling.classList.remove("hidden");
-        sibling.innerText = "Last Name cannot be empty.";
-      } else {
-        email.classList.remove("error");
-        sibling.classList.add("hidden");
-      }
-    } else if (i === password) {
-      if (!value.match(passPattern)) {
-        e.preventDefault();
-        password.classList.add("error");
-        sibling.classList.remove("hidden");
-        sibling.innerText = "Password cannot be empty.";
-      } else {
-        email.classList.remove("error");
-        sibling.classList.add("hidden");
+      // email is the correct format and is filled out
+      else {
+        inputElem.classList.remove("error-border");
+        inputElem.nextElementSibling.classList.add("hidden");
+        inputElem.nextElementSibling.innerText = "";
       }
     }
-  });
-});
+    // if the email field is empty
+    else if (inputName === "email" && inputElem.value.length === 0) {
+      e.preventDefault();
+      inputElem.classList.add("error-border");
+      inputElem.nextElementSibling.classList.remove("hidden");
+      inputElem.nextElementSibling.innerText = "Field cannot be empty";
+    }
+    // if the other input fields are empty
+    else if (inputElem.value.length === 0) {
+      e.preventDefault();
+      inputElem.classList.add("error-border");
+      inputElem.nextElementSibling.classList.remove("hidden");
+      inputElem.nextElementSibling.innerText = "Field cannot be empty";
+    }
+    // if the field is filled ou
+    else {
+      inputElem.classList.remove("error-border");
+      inputElem.nextElementSibling.classList.add("hidden");
+      inputElem.nextElementSibling.innerText = "";
+    }
+  }
+};
+
+button.addEventListener("click", checkValidity);
