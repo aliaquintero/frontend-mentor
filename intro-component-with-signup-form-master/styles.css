@@ -127,6 +127,10 @@ form button:hover {
 }
 
 /* active states */
+<<<<<<< HEAD
+=======
+
+>>>>>>> cf93eab (test)
 .error-border {
   border: 2px solid hsl(0, 100%, 74%);
   color: hsl(0, 100%, 74%);
