@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </header>
+      <form method="post">
+
+        <section class="pricing">
+
+          <div><span id="pageviews"></span> Pageviews</div> 
+
+          <div>$<span id="price"></span>/month</div>
+
+      
+            <input id="range-input" type="range" min="1" max="5"/>
+    
+
+        <section class="billing">
+
+          <div class="toggle-container">
+          <span>Monthly Billing</span>
+          <input
+            type="checkbox"
+            name="billing-toggle"
+            id="billing-toggle"
+          />
+          <span>Yearly Billing <span>25% discount</span></span>
+        </div>
+        </section>
+
+        <footer>
+          <ul>
+            <li>Unlimited websites</li>
+            <li>100% data ownership</li>
+            <li>Email reports</li>
+          </ul>
+          <button>Start my trial</button>
+        </footer>
+      </form>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Alia Quintero</a>.
+    </div>
+  </body>
+</html>
