@@ -4,6 +4,7 @@ const emailRegex = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 const error = document.querySelectorAll(".error");
 
 const checkValidity = (e) => {
+  e.preventDefault();
   for (let input of inputs) {
     let inputName = input.name;
     let inputElem = document.getElementById(inputName);
@@ -38,7 +39,7 @@ const checkValidity = (e) => {
       inputElem.nextElementSibling.classList.remove("hidden");
       inputElem.nextElementSibling.innerText = "Field cannot be empty";
     }
-    // if the field is filled ou
+    // if the field is filled out
     else {
       inputElem.classList.remove("error-border");
       inputElem.nextElementSibling.classList.add("hidden");
