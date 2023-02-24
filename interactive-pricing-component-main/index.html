@@ -9,11 +9,11 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Interactive pricing component</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
+
   <body>
     <main>
       <header>
@@ -21,29 +21,21 @@
         <p>Sign-up for our 30-day trial. No credit card required.</p>
       </header>
       <form method="post">
+        <div class="subscription-container">
+          <div class="pageviews-container"><span id="pageviews"></span> Pageviews</div>
 
-        <section class="pricing">
+          <div class="price-container"><span id="price"></span> / month</div>
 
-          <div><span id="pageviews"></span> Pageviews</div> 
-
-          <div>$<span id="price"></span>/month</div>
-
-      
-            <input id="range-input" type="range" min="1" max="5"/>
-    
-
-        <section class="billing">
-
-          <div class="toggle-container">
-          <span>Monthly Billing</span>
-          <input
-            type="checkbox"
-            name="billing-toggle"
-            id="billing-toggle"
-          />
-          <span>Yearly Billing <span>25% discount</span></span>
+          <input id="range-input" type="range" min="1" max="5" />
         </div>
-        </section>
+        <div class="billing-container">
+          <div class="toggle-container">
+            <p>Monthly Billing</p>
+            <input type="checkbox" name="billing-toggle" id="billing-toggle" />
+            <p>Yearly Billing <span class="disc">25% <span id="disc-text">discount</span></span>
+            </p>
+          </div>
+        </div>
 
         <footer>
           <ul>
