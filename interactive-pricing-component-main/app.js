@@ -15,12 +15,6 @@ billingToggle.checked = false;
 rangeInput.addEventListener("input", updateValue);
 billingToggle.addEventListener("click", updateValue);
 
-billingToggle.addEventListener("change", changePrice);
-
-function changePrice(e) {
-  console.log("toggled");
-}
-
 function updateValue(e) {
   pageviews.textContent = pricing.views[rangeInput.value - 1];
 
